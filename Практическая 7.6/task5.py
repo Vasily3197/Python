@@ -15,7 +15,7 @@
 
 summ = 0
 count = 0
-denominator = 3
+denominator = 1
 
 if denominator == 0:
     print("Делить на ноль нельзя!")
@@ -28,6 +28,6 @@ else:
             count += 1
             summ += result
 
-print(summ/count)
+    print(summ/count)
 
     
