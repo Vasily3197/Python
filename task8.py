@@ -21,51 +21,19 @@ import random
 print("Здравствуйте! Загадайте число от 0 до 100, а я его угадаю.")
 print("Общайтесь со мной при помощи цифр 1, 2 и 3, если мое число равно, больше или меньше Вашего. ")
 
-think = 50
 min_d = 0
 max_d = 100
-answer = ""
+print(f"Загаданное Вами число {max_d//2} ?")
+answer = input("Введите, если число\n 1 - равно\n 2 - больше\n 3 - меньше\n" )
+while answer != "1":
+    if answer == "2": 
+        min_d = min_d + (max_d - min_d) // 2
+        find = min_d + (max_d - min_d) // 2
+    if answer == "3":
+        max_d = max_d - (max_d - min_d) // 2
+        find = max_d - (max_d - min_d) // 2
+      
+    print(find)
+    answer = input()
 
-while 1 > 0:
-    print("Мое число:", think, ". Я угадал?" )
-
-    answer = int (input( " 1 - да\n 2 - больше\n 3 - меньше\n"))
-
-    if answer == 1:
-        print("Ураа! Я угадал! Игра окончена.")
-        break
-
-    elif answer == 3:
-        max_d = think - 1
-
-        try:
-            think = random.randint(min_d, max_d)
-        except:
-            print("Я думаю, что Вы хотите меня обмануть")
-
-    elif answer == 2:
-
-        min_d = think + 1
-        try:
-            think = random.randint(min_d, max_d)
-        except:
-            print("Я думаю, что Вы хотите меня обмануть")
-            break
-    else:
-        print("Пожалуйста, вводите только цифры: 1, 2 или 3")
-
-        print("загадайте число от 0 до 100")
-
-        
-
-
-    
-    
-
-    
-        
-
-
-
-
-        
+print("Я победил! Конец игры!")
