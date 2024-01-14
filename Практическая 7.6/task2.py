@@ -14,24 +14,14 @@
 # переменные имеют значащие имена, не только a, b, c, d;
 # задача решена с помощью конструкции for.
 
-jun = int (input("Введите зарплату за 1 месяц: " )) 
-feb = int (input("Введите зарплату за 2 месяц: " )) 
-mar = int (input("Введите зарплату за 3 месяц: " )) 
-apr = int (input("Введите зарплату за 4 месяц: " )) 
-may = int (input("Введите зарплату за 5 месяц: " )) 
-jun = int  (input("Введите зарплату за 6 месяц: " )) 
-jul = int  (input("Введите зарплату за 7 месяц: " )) 
-aug = int (input("Введите зарплату за 8 месяц: " )) 
-september = int (input("Введите зарплату за 9 месяц: " )) 
-oct = int (input("Введите зарплату за 10 месяц: " )) 
-now = int (input("Введите зарплату за 11 месяц: " )) 
-dec = int (input("Введите зарплату за 12 месяц: " )) 
-
 count = 0
 summ = 0
+month_count = 1
 
-for pay in jun, feb, mar, apr, may, jun, jul, aug, september, oct, now, dec:
-            count += 1
-            summ += pay
-print(summ/count)
+for month in range(12):
+    month = int (input(f"Введите зарплату за {month_count} месяц: " )) 
+    month_count+=1
+    count += 1
+    summ += month
+print (summ/count)
     
