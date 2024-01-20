@@ -34,7 +34,7 @@ v = round(4 * math.pi / 3 * (random_planet ** 3), 3)
 v_Earth = round (10.8321 * (10 ** 11), 3)
 
 if v < v_Earth:
-    print(f"Объём планеты Земля больше в {round(v_Earth / v_Earth, 3)} раз")
+    print(f"Объём планеты Земля больше в {round(v_Earth / v, 3)} раз")
 
 else:
     print(f"Объём планеты Земля меньше в {round(v / v_Earth, 3)} раз")

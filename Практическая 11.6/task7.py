@@ -20,10 +20,10 @@
 # Наибольшее число: 10
 
 first = float (input("Введите первое число: "))
-
 second = float (input("Введите второе число: "))
+print(f"Наибольшее число:  {(first + second + abs(first - second)) / 2}")
 
-print ((first - secd)  )
+
 
 
 
