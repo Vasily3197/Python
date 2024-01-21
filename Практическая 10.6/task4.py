@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*import
-
+import math
 print('Задача 4. Простые числа')
+
 
 # Напишите программу, которая считает количество простых чисел в заданной последовательности и выводит ответ на экран.
 
@@ -18,16 +19,52 @@ print('Задача 4. Простые числа')
 
 # Количество простых чисел в последовательности: 4.
 
+def is_prime(num):
+    d = 2
+    if num > 1:
+        while (num % d) != 0:
+            d = d + 1
+    return (d == num)
+ 
+c = []
+m = [0]
+count = 0
+print("Введите количество чисел: ")
+n = int(input())
+i = 0
+uniq = False
 
-sequence = int (input ("Введите сколько чисел будет в Вашей последовательности: "))
-a_prime_number = 0
+print("Введите числа: ")
 
-for num_1 in range(sequence):
-    number = int (input ("Введите число: "))
-    for num_2 in range(1, num_1):
-        if num_1 % num_2 == 0:
-            a_prime_number += 1
-print(f"Количество простых чисел в последовательности: {a_prime_number}")
+while i < n:
+    b = int(input())
+    if is_prime(b):
+        for j in range(len(m)):
+            if m[j] == b:
+                uniq = False
+                break
+            else:
+               uniq = True
+        if uniq:
+            count = count + 1
+            m.append(b)
+    c.append(b)
+    i = i + 1
+
+print("Количество простых чисел в последовательности: ", count)
+print(m[1:])
+
+
+
+
+ 
+
+
+
+
+
+
+
  
     
      
