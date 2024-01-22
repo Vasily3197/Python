@@ -10,39 +10,48 @@ print('Задача 3. Апгрейд калькулятора')
 
 # Запрошенные числа должны передаваться в функции суммы, максимума и минимума при помощи аргументов.
 
-print(" Для выхода нажмите q ")
-
-def first_number():
-    first = float (input("Введите первое число: "))
-
-def symbol():
-   symb = input("Какое действие Вы хотите произвести, введите + - * /: )
-
-def second_number():
-    second = float (input("Введите второе число: "))
-
 
 while True:
+      
+    def addition():
+        print ("%.2f" % (first + second))
 
-    s = input("Какое действие Вы хотите произвести, введите + - * /: ")
-    if s == 'q': break
-    if s in ('+', '-', '*', '/'):
-        x = float (input("Введите первое число: "))
-        y = float (input("Введите второе число: "))
+    def subtraction():
+        print ("%.2f" % (first - second))
 
-        if s == '+':
-            print ("%.2f" % (x+y))
+    def multiplication():
+        print ("%.2f" % (first * second))
 
-        elif s == '-':
-            print ("%.2f" % (x-y))
+    def division():
+        if  second !=0:
+            print ("%.2f" % (first / second))
+        else:
+            print("Деление на ноль!")
 
-        elif s == '*':
-            print ("%.2f" % (x*y))
+    print(" Для выхода нажмите q в выборе символа ")
+    first = float (input("Введите первое число: "))
+    symb = input("Какое действие Вы хотите произвести, введите + - * /: " )
+    second = float (input("Введите второе число: "))
+    max_sum = 0
+    
 
-        elif s == '/':
-            if y !=0:
-                print ("%.2f" % (x/y))
-            else:
-                print("Деление на ноль!")
-    else:
-        print: print ("Неверный знак")
+    if symb == "q": break
+
+    elif symb == "+": addition()
+        
+    elif symb == "-": subtraction()
+
+    elif symb == "*": multiplication()
+
+    elif symb == "/": division()
+    
+    else: print("Ошибка ввода")
+
+
+
+
+    
+
+            
+
+

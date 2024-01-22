@@ -11,12 +11,17 @@ print('Задача 1. Сумма чисел')
 
 
 digit = int (input("Введите целое положительное число: "))
+
 while digit <= 0 or digit % 1 !=0:
+
     print("Нужно ввести целое и положительное число.")
+
     digit = int (input("Введите целое положительное число: "))
 
 def summa_n(digit): 
+
     return digit * (1 + digit) // 2
+
 print(f"Я знаю, что сумма чисел от 1 до {digit} равна {summa_n(digit)}")
 
 
